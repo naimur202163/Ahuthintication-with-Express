@@ -77,8 +77,8 @@ exports.signin = (req, res) => {
         fullName: user.fullName,
       },
 
-      message:"Login successfully",
-      accessToken:token
+      message: "Login successfully",
+      accessToken: token,
     });
   });
 };
