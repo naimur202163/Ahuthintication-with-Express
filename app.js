@@ -1,6 +1,6 @@
 const express = require("express");
 const { default: mongoose } = require("mongoose");
-
+const userRoutes=require('./routes/userRoutes');
 const app = express();
 require("dotenv").config();
 
@@ -20,6 +20,12 @@ try {
 } catch (error) {
   console.log(error);
 }
+
+// Routes immpot
+
+app.use('api/v1',userRoutes)
+
+
 
 // Server error handler
 process.on('unhandledRejection',error=>{
