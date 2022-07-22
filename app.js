@@ -11,7 +11,7 @@ app.use(express.json());
 // Connection to the data base
 
 try {
-  mongoose.connect(`mongodb://localhost:27017/userdb`, {
+  mongoose.connect(`mongodb://localhost:27017/Authintication`, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
   });
@@ -23,7 +23,7 @@ try {
 
 // Routes immpot
 
-app.use('api/v1',userRoutes)
+app.use('/api/v1',userRoutes)
 
 
 

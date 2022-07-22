@@ -84,7 +84,7 @@ exports.signin = (req, res) => {
 };
 
 exports.getAllUsers = (req, res) => {
-  if (!user) {
+  if (!User ) {
     res.status(403).send({
       message: "Invalid JWT token",
     });
@@ -95,7 +95,15 @@ exports.getAllUsers = (req, res) => {
     });
   } else {
     res.status(403).send({
+      User,
       message: "Unauthorised access",
     });
   }
+};
+
+exports.hello = (req, res) => {
+  res.json({
+    success: true,
+    message: "Hello World",
+  });
 };
